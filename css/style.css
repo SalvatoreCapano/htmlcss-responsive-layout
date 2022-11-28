@@ -1,0 +1,17 @@
+/* CSS RESET */
+* ,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* COLOR PALETTE:
+    primary-color: #0084fd
+    primary-color-light: #b5ddff
+    secondary-color: #9792e4
+    grey-text: #5f7486
+    yellow-text: #fdc15f
+    footer-background: #333333
+*/

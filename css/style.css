@@ -15,3 +15,71 @@
     yellow-text: #fdc15f
     footer-background: #333333
 */
+
+/* --- Approccio Mobile-First --- */
+/* Regole Generali */
+body {
+    font-family: 'PT Sans', sans-serif;
+}
+
+/* Header */
+body > header {
+    width: 100vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /* temp */
+    padding: 20px 30px;
+    background-color: aquamarine;
+}
+
+header > div {
+    /* temp */
+    font-size: 2rem;
+}
+
+header > button {
+    vertical-align: middle;
+
+    display: inline-block;
+}
+
+header > nav {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* Visualizzazione Tablet */
+@media screen and (min-width:480px) {
+    header {
+        color: red;
+    }
+}
+
+/* Visualizzazione Desktop */
+@media screen and (min-width:768px) {
+    header > button {
+        display: none;
+    }
+    header > nav {
+        display: inline-block;
+    }
+}
+
+
+

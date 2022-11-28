@@ -22,13 +22,31 @@ body {
     font-family: 'PT Sans', sans-serif;
 }
 
+.container {
+    max-width: 1140px;
+    width: 85%;
+    margin: 0 auto;
+
+    /* temp */
+    height: 100%;
+    background-color: brown;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.flexRowSB {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 /* Header */
 body > header {
     width: 100vw;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
 
     position: fixed;
@@ -36,23 +54,21 @@ body > header {
     left: 0;
 
     /* temp */
-    padding: 20px 30px;
+    padding: 20px 0;
     background-color: aquamarine;
 }
 
-header > div {
-    /* temp */
-    font-size: 2rem;
-}
-
-header > button {
-    vertical-align: middle;
-
+header .container > button {
     display: inline-block;
 }
 
-header > nav {
+header .container > nav {
     display: none;
+}
+
+header .container > nav ul {
+    list-style: none;
+    gap: 2rem;
 }
 
 
@@ -64,8 +80,21 @@ header > nav {
 
 
 
+
+
+
+/* temp */
+section {
+    height: 500px;
+    background-color: turquoise;
+}
+
 /* Visualizzazione Tablet */
 @media screen and (min-width:480px) {
+    .container {
+        width: 90%;
+    }
+
     header {
         color: red;
     }
@@ -73,12 +102,17 @@ header > nav {
 
 /* Visualizzazione Desktop */
 @media screen and (min-width:768px) {
-    header > button {
+    .container {
+        width: 90%;
+    }
+
+    header .container > button {
         display: none;
     }
-    header > nav {
+    header .container > nav {
         display: inline-block;
     }
+   
 }
 
 

@@ -125,6 +125,12 @@ h2 {
     font-size: 2.5rem;
 }
 
+h3 {
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+}
+
 .smallText {
     font-size: 0.9rem;
 }
@@ -313,10 +319,6 @@ main {
     text-align: center;
 }
 
-#testimonialsSection h3 {
-    font-weight: 500;
-}
-
 #testimonialsSection h2 {
     color: var(--secondaryColor);
     margin: var(--mainSpacing) 0;
@@ -415,6 +417,10 @@ main {
     justify-content: center;
     gap: var(--mainSpacing);
 }
+#aboutSection h2 {
+    color: var(--secondaryColor);
+    font-size: 3.5rem;
+}
 
 #aboutSection .col:first-child p{
     margin-top: calc(var(--mainSpacing) * 2);
@@ -455,32 +461,86 @@ main {
 
 
 
+
+
+
+
+
+
+
+
 /* --- Get Started Section --- */
-#getStartedSection .placeholder {
+#getStartedSection .container {
+    text-align: center;
+}
+
+#getStartedSection h3 {
+    color: white;
+    margin-bottom: var(--mainSpacing);
+}
+
+#getStartedSection .innerContainer {
     width: 100%;
-    max-width: 440px;
+    max-width: 550px;
+    margin: 0 auto;
+    gap: var(--mainSpacing);
+}
+
+#getStartedSection .innerContainer h2 {
+    color: white;
+}
+
+#getStartedSection .innerContainer span {
+    color: #fdc15f;
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+#getStartedSection .innerContainer p {
+    color: white;
+}
+
+#getStartedSection .innerContainer .btn {
+    color: var(--secondaryColor);
+    font-size: 1.1rem;
+    font-weight: 700;
+    align-self: center;
+    padding: 1.5em 4.5em;
+}
+
+#getStartedSection .innerContainer ul {
+    gap: var(--mainSpacing);
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#getStartedSection .innerContainer ul * {
+   color: white;
+   align-items: center;
+   position: relative;
+}
+
+#getStartedSection .innerContainer ul li:not(:first-child)::after {
+    position: absolute;
+    top: 50%;
+    left: -1rem;
+    transform: translateY(-50%);
+
+    content: '\00B7';
+    font-size: 2rem;
 }
 
 /* --- Footer --- */
-footer .placeholder {
-    width: 100%;
-    max-width: 440px;
-}
+
 
 /* temp */
 section {
-    /* height: 500px; */
-    background-color: turquoise;
+  
     margin-bottom: 10px;
 }
 
-.placeholder {
-    background-color: purple;
-    text-align: center;
-    width: 50%;
-    height: 20px;
-    margin: 5px auto;
-}
+
 
 
 
@@ -514,6 +574,7 @@ section {
         width: 100%;
         text-align: left;
     }
+
     #testimonialsSection .card .textContainer {
         width: 70%;
     }
@@ -522,10 +583,6 @@ section {
         width: calc(50% - calc(var(--mainSpacing)) / 2);
     }
 
-
-
-
-
     #aboutSection .col:first-child {
         width: 55%;
     }
@@ -533,11 +590,6 @@ section {
     #aboutSection .col:last-child {
         width: 35%;
     }
-
-
-
-
-   
 }
 
 /* Visualizzazione Desktop */
@@ -546,7 +598,7 @@ section {
         width: 90%;
     }
 
-    header .container > button {
+    header .container > #menu {
         display: none;
     }
 
@@ -575,5 +627,4 @@ section {
     #aboutSection .col:last-child {
         width: 25%;
     }
-    
 }

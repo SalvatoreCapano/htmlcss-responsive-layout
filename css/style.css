@@ -20,6 +20,7 @@
     --primaryColor: #0084fd;
     --primaryColorLight: #b5ddff;
     --secondaryColor: #9792e4;
+    --mainSpacing: 1.5rem;
 }
 
 html {
@@ -44,8 +45,20 @@ body {
 
 .col {
     width: 100%;
-    height: 300px;
+    /* height: 300px; */
     background-color: wheat;
+}
+
+.card {
+    padding: var(--mainSpacing);
+    /* border-radius: 5%; */
+    border-radius: 20px;
+}
+
+.card > h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: var(--mainSpacing) 0;
 }
 
 .flexRow {
@@ -65,6 +78,7 @@ body {
 }
 
 a.btn {
+    display: inline-block;
     color: black;
     background-color: white;
     padding: 0.4em 0.8em;
@@ -73,6 +87,11 @@ a.btn {
 
 .btn:active {
     background-color: rgb(200, 200, 200);
+}
+
+a.largeBtn {
+    padding: 0.6em 3em;
+    font-size: 0.9rem;
 }
 
 /* Header */
@@ -118,16 +137,90 @@ header a{
     color: white;
 }
 
+header button:active i {
+    color: rgb(200, 200, 200);
+}
+
 /* --- Main --- */
 main {
     margin-top: 4.3rem;
 }
 
 /* --- Features Section --- */
+#featuresSection {
+    padding: 3rem 0;
+}
+
 #featuresSection .container {
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: var(--mainSpacing);
 }
+
+#featuresSection .card {
+    text-align: center;
+    background-color: var(--primaryColorLight);
+}
+
+#featuresSection .card i {
+    font-size: 4.5rem;
+    color: var(--primaryColor);
+}
+
+#featuresSection .card h2 {
+    color: var(--primaryColor);
+}
+
+#featuresSection .card p {
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.6em;
+    color: rgb(81, 81, 81);
+}
+
+#featuresSection .largeCol {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;  /*rimuovo padding per poterlo applicare solo al textContainer*/
+}
+
+#featuresSection .largeCol > * {
+    width: 100%;
+}
+
+#featuresSection .largeCol .textContainer {
+    text-align: left;
+    padding: var(--mainSpacing);
+}
+
+#featuresSection .largeCol .imgContainer {
+    align-self: flex-end;
+}
+
+#featuresSection .largeCol .imgContainer img {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+
+#featuresSection .largeCol .btn {
+    text-decoration: none;
+    font-weight: 700;
+
+    margin-top: var(--mainSpacing);
+
+    color: white;
+    background-color: var(--primaryColor);
+}
+
+#featuresSection .largeCol .btn i {
+    font-size: 1rem;
+    margin-left: 5px;
+    color: white;
+}
+
+
+
+
 
 /* --- Planning Section --- */
 #planningSection .container{
@@ -185,6 +278,11 @@ section {
     margin: 5px auto;
 }
 
+
+
+
+
+
 /* Visualizzazione Tablet */
 @media screen and (min-width:480px) {
     .container {
@@ -203,6 +301,12 @@ section {
         width: calc((100% / 3) * 2 - 0.5rem);
     }
 
+
+
+
+
+
+
     #planningSection .col {
         width: 40%;
         background-color: teal;
@@ -215,6 +319,11 @@ section {
     #aboutSection .col:last-child {
         width: 35%;
     }
+
+
+
+
+   
 }
 
 /* Visualizzazione Desktop */
@@ -226,10 +335,19 @@ section {
     header .container > button {
         display: none;
     }
+
     header .container > nav {
         display: inline-block;
     }
-   
+
+    #featuresSection > .container > .largeCol > .textContainer {
+        width: 50%;
+    }
+
+    #featuresSection > .container > .largeCol > .imgContainer{
+        width: 50%;
+    }
+
 }
 
 

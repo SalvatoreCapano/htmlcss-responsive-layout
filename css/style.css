@@ -133,6 +133,22 @@ h2 {
     font-size: 1.1rem;
 }
 
+.imgContainer.testimonialPhoto {
+    width: 11rem;
+    height: 11rem;
+    border-radius: 50%;
+    overflow: hidden;
+  
+    margin: 0 auto;
+    flex-shrink: 0;
+}
+
+.testimonialPhoto > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
 /* Header */
 body > header {
     width: 100vw;
@@ -323,22 +339,6 @@ main {
     background-color: var(--secondaryColor);
 }
 
-#testimonialsSection .card .imgContainer {
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-    overflow: hidden;
-  
-    margin: 0 auto;
-    flex-shrink: 0;
-}
-
-#testimonialsSection .card .imgContainer img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
 #testimonialsSection .card .textContainer {
     width: 100%;
     margin: 0 auto;
@@ -405,15 +405,55 @@ main {
     font-weight: 700;
 }
 
-
-
-
 /* --- About Section --- */
+#aboutSection {
+    padding: 5rem 0;
+}
+
 #aboutSection .container{
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: var(--mainSpacing);
 }
+
+#aboutSection .col:first-child p{
+    margin-top: calc(var(--mainSpacing) * 2);
+    line-height: 2em;
+}
+
+#aboutSection #quoteIcon {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+#aboutSection #quoteIcon::after{
+    content: '\201C';
+    position: absolute;
+    top: -40%;
+    right: -30px;
+    font-size: 15rem;
+    color: var(--secondaryColor);
+}
+
+#aboutSection .col:last-child p{
+    color: var(--secondaryColor);
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: var(--mainSpacing) 0;
+}
+
+#aboutSection .col:last-child .btn {
+    color: white;
+    background-color: var(--secondaryColor);
+}
+
+
+
+
+
+
+
 
 /* --- Get Started Section --- */
 #getStartedSection .placeholder {
@@ -526,6 +566,14 @@ section {
         /* width: calc(50% - calc(var(--mainSpacing)) / 2); */
         width: calc((100% / 3) - 1rem);
 
+    }
+
+    #aboutSection .col:first-child {
+        width: 65%;
+    }
+    
+    #aboutSection .col:last-child {
+        width: 25%;
     }
     
 }

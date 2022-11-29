@@ -94,6 +94,25 @@ a.largeBtn {
     font-size: 0.9rem;
 }
 
+a.circularBtn {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    color: black;
+    background-color: var(--secondaryColor);
+}
+
+p {
+    line-height: 1.6em;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
 /* Header */
 body > header {
     width: 100vw;
@@ -173,7 +192,7 @@ main {
 #featuresSection .card p {
     font-size: 0.9rem;
     font-weight: 700;
-    line-height: 1.6em;
+    /* line-height: 1.6em; */
     color: rgb(81, 81, 81);
 }
 
@@ -218,16 +237,44 @@ main {
     color: white;
 }
 
-
-
-
-
 /* --- Planning Section --- */
+#planningSection {
+    padding: 3rem 0;
+    background-color: var(--secondaryColor);
+}
+
 #planningSection .container{
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: var(--mainSpacing);
 }
+
+#planningSection .col img {
+    width: 100%;
+}
+
+#planningSection .col:first-child {
+    color: white;
+}
+
+#planningSection .col:first-child h2 {
+    margin: calc(var(--mainSpacing) * 2) 0;
+}
+
+#planningSection .card {
+    text-align: center;
+    background-color: white;
+}
+
+#planningSection .card p {
+    font-style: italic;
+    margin-bottom: var(--mainSpacing);
+}
+
+
+
+
+
 
 /* --- Testimonials Section --- */
 #testimonialsSection .flexCol {
@@ -349,6 +396,3 @@ section {
     }
 
 }
-
-
-

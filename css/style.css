@@ -16,10 +16,21 @@
     footer-background: #333333
 */
 
+:root {
+    --primaryColor: #0084fd;
+    --primaryColorLight: #b5ddff;
+    --secondaryColor: #9792e4;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 /* --- Approccio Mobile-First --- */
 /* Regole Generali */
 body {
     font-family: 'PT Sans', sans-serif;
+    background-color: var(--primaryColor);
 }
 
 .container {
@@ -28,7 +39,6 @@ body {
     margin: 0 auto;
 
     /* temp */
-    height: 100%;
     background-color: brown;
 }
 
@@ -54,23 +64,44 @@ body {
     justify-content: space-between;
 }
 
+a.btn {
+    color: black;
+    background-color: white;
+    padding: 0.4em 0.8em;
+    border-radius: 500px; /*for pill-shape*/
+}
+
+.btn:active {
+    background-color: rgb(200, 200, 200);
+}
+
 /* Header */
 body > header {
     width: 100vw;
 
-    align-items: center;
+    padding: 16px 0;
 
     position: fixed;
     top: 0;
     left: 0;
 
-    /* temp */
-    padding: 20px 0;
-    background-color: aquamarine;
+    background-color: var(--primaryColor);
+}
+
+header .container {
+    align-items: center;
 }
 
 header .container > button {
     display: inline-block;
+    font-size: 1.4rem;
+    color: white;
+    padding: 0.1em 0.5em;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
 }
 
 header .container > nav {
@@ -82,9 +113,14 @@ header .container > nav ul {
     gap: 2rem;
 }
 
+header a{
+    text-decoration: none;
+    color: white;
+}
+
 /* --- Main --- */
 main {
-    margin-top: 4rem;
+    margin-top: 4.3rem;
 }
 
 /* --- Features Section --- */

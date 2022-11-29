@@ -1,0 +1,668 @@
+/* CSS RESET */
+* ,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* COLOR PALETTE:
+    primary-color: #0084fd
+    primary-color-light: #b5ddff
+    secondary-color: #9792e4
+    grey-text: #5f7486
+    yellow-text: #fdc15f
+    footer-background: #333333
+*/
+
+:root {
+    --primaryColor: #0084fd;
+    --primaryColorLight: #b5ddff;
+    --secondaryColor: #9792e4;
+    --mainSpacing: 1.5rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Approccio Mobile-First --- */
+/* Regole Generali */
+body {
+    font-family: 'PT Sans', sans-serif;
+    background-color: var(--primaryColor);
+}
+
+section {
+    padding: 3rem 0;
+}
+
+section:nth-of-type(odd) {
+    background-color: white;
+}
+
+section:nth-of-type(even) {
+    background-color: var(--secondaryColor);
+}
+
+.container {
+    max-width: 1140px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.innerContainer {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.col {
+    width: 100%;
+}
+
+.card {
+    padding: var(--mainSpacing);
+    border-radius: 20px;
+}
+
+.card > h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: var(--mainSpacing) 0;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.flexCol{
+    display: flex;
+    flex-direction: column;
+}
+
+.flexRowSB {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+a.btn {
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    background-color: white;
+    padding: 0.4em 0.8em;
+    border-radius: 500px; /*for pill-shape*/
+}
+
+.btn:active {
+    background-color: rgb(200, 200, 200);
+}
+
+a.largeBtn {
+    padding: 0.6em 3em;
+    font-size: 0.9rem;
+}
+
+a.circularBtn {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    color: black;
+    background-color: var(--secondaryColor);
+}
+
+p {
+    line-height: 1.6em;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.smallText {
+    font-size: 0.9rem;
+}
+
+.bigText {
+    font-size: 1.1rem;
+}
+
+.imgContainer.testimonialPhoto {
+    width: 11rem;
+    height: 11rem;
+    border-radius: 50%;
+    overflow: hidden;
+  
+    margin: 0 auto;
+    flex-shrink: 0;
+}
+
+.testimonialPhoto > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Header */
+body > header {
+    width: 100vw;
+
+    padding: 16px 0;
+    z-index: 30;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: var(--primaryColor);
+}
+
+header .container {
+    align-items: center;
+}
+
+header input {
+    display: none;
+}
+
+header input:checked + #menuBox {
+    right: 0;
+    opacity: 1;
+}
+
+/* #menuBox {
+    width: 300px;
+    height: 400px;
+    background-color: rgb(238, 212, 179);
+
+    position: absolute;
+    top: 100px;
+    right: -350px;
+
+    transition: all 0.5s;
+
+    opacity: 0;
+} */
+
+header .container > #menu {
+    display: inline-block;
+    font-size: 1.4rem;
+    color: white;
+    padding: 0.1em 0.5em;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+header .container > #menuBox {
+    right: -500px;
+}
+
+header .container > nav ul {
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+}
+
+header #menu:active i {
+    color: rgb(200, 200, 200);
+}
+
+/* --- Main --- */
+main {
+    margin-top: 4.3rem;
+}
+
+/* --- Features Section --- */
+#featuresSection .container {
+    flex-wrap: wrap;
+    gap: var(--mainSpacing);
+}
+
+#featuresSection .card {
+    text-align: center;
+    background-color: var(--primaryColorLight);
+}
+
+#featuresSection .card i {
+    font-size: 4.5rem;
+    color: var(--primaryColor);
+}
+
+#featuresSection .card .cardTitle {
+    color: var(--primaryColor);
+}
+
+#featuresSection .card p {
+    font-weight: 700;
+    color: rgb(84, 84, 84);
+}
+
+#featuresSection .largeCol {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;  /*rimuovo padding per poterlo applicare solo al textContainer*/
+}
+
+#featuresSection .largeCol > * {
+    width: 100%;
+}
+
+#featuresSection .largeCol .textContainer {
+    text-align: left;
+    padding: var(--mainSpacing);
+}
+
+#featuresSection .largeCol p {
+    margin-top: var(--mainSpacing);
+}
+
+#featuresSection .largeCol .btn {
+    text-decoration: none;
+    font-weight: 700;
+
+    margin-top: var(--mainSpacing);
+
+    color: white;
+    background-color: var(--primaryColor);
+}
+
+#featuresSection .largeCol .btn i {
+    font-size: 1rem;
+    margin-left: 5px;
+    color: white;
+}
+
+#featuresSection .largeCol .imgContainer {
+    align-self: flex-end;
+}
+
+#featuresSection .largeCol .imgContainer img {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* --- Planning Section --- */
+#planningSection .container{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: var(--mainSpacing);
+}
+
+#planningSection .col img {
+    width: 100%;
+}
+
+#planningSection .col:first-child {
+    color: white;
+}
+
+#planningSection .col:first-child h2 {
+    margin: calc(var(--mainSpacing) * 2) 0;
+}
+
+#planningSection .card {
+    text-align: center;
+    background-color: white;
+    border-radius: 60px;
+}
+
+#planningSection .card img{
+    width: 60%;
+}
+
+#planningSection .card p {
+    font-style: italic;
+    margin-bottom: var(--mainSpacing);
+}
+
+/* --- Testimonials Section --- */
+#testimonialsSection {
+    text-align: center;
+}
+
+#testimonialsSection h2 {
+    color: var(--secondaryColor);
+    margin: var(--mainSpacing) 0;
+}
+
+#testimonialsSection p {
+    margin-bottom: var(--mainSpacing);
+}
+
+#testimonialsSection .flexCol {
+    gap: var(--mainSpacing);
+}
+
+#testimonialsSection .card {
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    color: white;
+    background-color: var(--secondaryColor);
+}
+
+#testimonialsSection .card .textContainer {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#testimonialsSection .card .textContainer .testimonialName{
+    display: block;
+    margin-top: var(--mainSpacing);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+#testimonialsSection .quote::before, 
+#testimonialsSection .quote::after {
+    font-size: 3.5rem;
+    position: relative;
+    top: 30px;
+}
+
+#testimonialsSection .quote::before {
+    content: '\201C';
+}
+
+#testimonialsSection .quote::after {
+    content: '\201D';
+}
+
+/* --- Benefits Section --- */
+#benefitsSection .flexRow {
+    gap: var(--mainSpacing);
+    flex-wrap: wrap;
+}
+
+#benefitsSection .container > h2 {
+    color: white;
+    text-align: center;
+    margin: var(--mainSpacing) 0;
+}
+
+#benefitsSection .card {
+    align-items: flex-start;
+    gap: var(--mainSpacing);
+    background-color: white;
+}
+
+#benefitsSection .card .cardNumber {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--secondaryColor);
+}
+
+#benefitsSection .card h2 {
+    margin: 0;
+    color: var(--secondaryColor);
+}
+
+#benefitsSection .card p {
+    color: rgb(84, 84, 84);
+}
+
+#benefitsSection .card .btn {
+    background-color: var(--secondaryColor);
+    color: white;
+    font-weight: 700;
+}
+
+/* --- About Section --- */
+#aboutSection {
+    padding: 5rem 0;
+}
+
+#aboutSection .container{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--mainSpacing);
+}
+#aboutSection h2 {
+    color: var(--secondaryColor);
+    font-size: 3.5rem;
+}
+
+#aboutSection .col:first-child p{
+    margin-top: calc(var(--mainSpacing) * 2);
+    line-height: 2em;
+}
+
+#aboutSection #quoteIcon {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+#aboutSection #quoteIcon::after{
+    content: '\201C';
+    position: absolute;
+    top: -40%;
+    right: -30px;
+    font-size: 15rem;
+    color: var(--secondaryColor);
+}
+
+#aboutSection .col:last-child p{
+    color: var(--secondaryColor);
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: var(--mainSpacing) 0;
+}
+
+#aboutSection .col:last-child .btn {
+    color: white;
+    background-color: var(--secondaryColor);
+}
+
+/* --- Get Started Section --- */
+#getStartedSection .container {
+    text-align: center;
+}
+
+#getStartedSection h3 {
+    color: white;
+    margin-bottom: var(--mainSpacing);
+}
+
+#getStartedSection .innerContainer {
+    gap: var(--mainSpacing);
+}
+
+#getStartedSection .innerContainer h2 {
+    color: white;
+}
+
+#getStartedSection .innerContainer span {
+    color: #fdc15f;
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+#getStartedSection .innerContainer p {
+    color: white;
+}
+
+#getStartedSection .innerContainer .btn {
+    color: var(--secondaryColor);
+    font-size: 1.1rem;
+    font-weight: 700;
+    align-self: center;
+    padding: 1.5em 4.5em;
+}
+
+#getStartedSection .innerContainer ul {
+    /* list-style: none; */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#getStartedSection .innerContainer ul li {
+    margin-right: var(--mainSpacing);
+}
+
+#getStartedSection .innerContainer ul li:first-child {
+    list-style: none;
+}
+
+#getStartedSection .innerContainer ul * {
+   color: white;
+   align-items: center;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    color: white;
+    padding: var(--mainSpacing);
+    background-color: #333;
+}
+
+footer .innerContainer {
+    max-width: 400px;
+    gap: calc(2 * var(--mainSpacing));
+}
+
+footer p {
+    line-height: unset;
+}
+
+footer a {
+    color: var(--secondaryColor);
+}
+
+/* media query per il menu a tendina nelle visualizzazioni mobile e tablet */
+@media screen and (max-width:768px) {
+    header #menuBox {
+        width: 90vw;
+        /* height: 400px; */
+        padding: var(--mainSpacing);
+        background-color: var(--primaryColorLight);
+
+        position: absolute;
+        top: 100px;
+        right: -350px;
+
+        transition: all 0.5s;
+
+        opacity: 0;
+
+        box-shadow: 0px 0px 10px 1px #00000077;
+    }
+
+    header .container nav > ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+/* Visualizzazione Tablet */
+@media screen and (min-width:480px) {
+    .container {
+        width: 90%;
+    }
+
+    header {
+        color: red;
+    }
+
+    .col {
+        width: calc((100% / 3) - 1rem);
+    }
+
+    .largeCol {
+        width: calc((100% / 3) * 2 - 0.5rem);
+    }
+
+    #planningSection .col {
+        width: 35%;
+    }
+
+    #testimonialsSection .card {
+        flex-wrap: nowrap;
+        width: 100%;
+        text-align: left;
+    }
+
+    #testimonialsSection .card .textContainer {
+        width: 70%;
+    }
+
+    #benefitsSection .col {
+        width: calc(50% - calc(var(--mainSpacing)) / 2);
+    }
+
+    #aboutSection .col:first-child {
+        width: 55%;
+    }
+    
+    #aboutSection .col:last-child {
+        width: 35%;
+    }
+}
+
+/* Visualizzazione Desktop */
+@media screen and (min-width:768px) {
+    .container {
+        width: 90%;
+    }
+
+    header .container > #menu {
+        display: none;
+    }
+
+    header .container > nav {
+        display: inline-block;
+    }
+
+    #featuresSection > .container > .largeCol > .textContainer {
+        width: 50%;
+    }
+
+    #featuresSection > .container > .largeCol > .imgContainer{
+        width: 50%;
+    }
+
+    #benefitsSection .col {
+        /* width: calc(50% - calc(var(--mainSpacing)) / 2); */
+        width: calc((100% / 3) - 1rem);
+
+    }
+
+    #aboutSection .col:first-child {
+        width: 65%;
+    }
+    
+    #aboutSection .col:last-child {
+        width: 25%;
+    }
+}

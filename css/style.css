@@ -52,12 +52,18 @@ section:nth-of-type(even) {
     margin: 0 auto;
 
     /* temp */
-    background-color: brown;
+    /* background-color: brown; */
+}
+
+.innerContainer {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
 }
 
 .col {
     width: 100%;
-    background-color: wheat;
+    /* background-color: wheat; */
 }
 
 .card {
@@ -454,21 +460,6 @@ main {
     background-color: var(--secondaryColor);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* --- Get Started Section --- */
 #getStartedSection .container {
     text-align: center;
@@ -480,9 +471,6 @@ main {
 }
 
 #getStartedSection .innerContainer {
-    width: 100%;
-    max-width: 550px;
-    margin: 0 auto;
     gap: var(--mainSpacing);
 }
 
@@ -509,43 +497,45 @@ main {
 }
 
 #getStartedSection .innerContainer ul {
-    gap: var(--mainSpacing);
-    list-style: none;
+    /* list-style: none; */
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+#getStartedSection .innerContainer ul li {
+    margin-right: var(--mainSpacing);
+}
+
+#getStartedSection .innerContainer ul li:first-child {
+    list-style: none;
 }
 
 #getStartedSection .innerContainer ul * {
    color: white;
    align-items: center;
-   position: relative;
-}
-
-#getStartedSection .innerContainer ul li:not(:first-child)::after {
-    position: absolute;
-    top: 50%;
-    left: -1rem;
-    transform: translateY(-50%);
-
-    content: '\00B7';
-    font-size: 2rem;
 }
 
 /* --- Footer --- */
-
-
-/* temp */
-section {
-  
-    margin-bottom: 10px;
+footer {
+    text-align: center;
+    color: white;
+    padding: var(--mainSpacing);
+    background-color: #333;
 }
 
+footer .innerContainer {
+    max-width: 400px;
+    gap: calc(2 * var(--mainSpacing));
+}
 
+footer p {
+    line-height: unset;
+}
 
-
-
-
-
+footer a {
+    color: var(--secondaryColor);
+}
 
 /* Visualizzazione Tablet */
 @media screen and (min-width:480px) {

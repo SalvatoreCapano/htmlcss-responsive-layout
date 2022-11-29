@@ -24,7 +24,7 @@
             <a href="#">
                 <img src="img/logo.png" alt="logo">
             </a>
-            <button>
+            <button id="menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
             <nav>
@@ -52,10 +52,11 @@
     <main>
         <section id="featuresSection">
             <div class="container flexRow">
+
                 <div class="col largeCol card">
                     <div class="textContainer">
-                        <h2>Get a demo application</h2>
-                        <p>
+                        <h2  class="cardTitle">Get a demo application</h2>
+                        <p class="smallText">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                             Placeat blanditiis totam quia vitae recusandae consequatur 
                             sed facere totam quas recusandae blanditiis.
@@ -68,43 +69,48 @@
                     <div class="imgContainer">
                         <img src="img/phone.png" alt="phone">
                     </div>
-                </div>
+                </div> <!-- /card-->
+
                 <div class="col card">
                     <i class="fa-solid fa-file-code"></i>
-                    <h2>Clean Code</h2>
-                    <p>
+                    <h2 class="cardTitle">Clean Code</h2>
+                    <p class="smallText">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Placeat blanditiis totam quia vitae recusandae consequatur 
                         sed facere totam quas recusandae blanditiis.
                     </p>
-                </div>
+                </div> <!-- /card-->
+
                 <div class="col card">
                     <i class="fa-solid fa-compass-drafting"></i>
-                    <h2>Web Design</h2>
-                    <p>
+                    <h2  class="cardTitle">Web Design</h2>
+                    <p class="smallText">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Placeat blanditiis totam quia vitae recusandae consequatur 
                         sed facere totam quas recusandae blanditiis.
                     </p>
-                </div>
+                </div> <!-- /card-->
+
                 <div class="col card">
                     <i class="fa-solid fa-laptop-code"></i>
-                    <h2>Development</h2>
-                    <p>
+                    <h2  class="cardTitle">Development</h2>
+                    <p class="smallText">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Placeat blanditiis totam quia vitae recusandae consequatur 
                         sed facere totam quas recusandae blanditiis.
                     </p>
-                </div>
+                </div> <!-- /card-->
+
                 <div class="col card">
                     <i class="fa-solid fa-bullhorn"></i>
-                    <h2>Branding</h2>
-                    <p>
+                    <h2  class="cardTitle">Branding</h2>
+                    <p class="smallText">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Placeat blanditiis totam quia vitae recusandae consequatur 
                         sed facere totam quas recusandae blanditiis.
                     </p>
-                </div>
+                </div> <!-- /card-->
+
             </div> <!-- /container-->
         </section> <!-- /featuresSection-->
 
@@ -113,7 +119,7 @@
                 <div class="col">
                     <img src="img/planning1.png" alt="planning">
                     <h2>Strategic Planning</h2>
-                    <p>
+                    <p class="smallText">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Placeat blanditiis totam quia vitae recusandae consequatur 
                         sed facere totam quas recusandae blanditiis.
@@ -122,7 +128,7 @@
                 <div class="col card">
                     <img src="img/planning2.png" alt="planning">
                     <h2>App Developement</h2>
-                    <p>
+                    <p class="smallText">
                         Develop an on-demand app for your delivery business
                         to reach your targeted customers without any interruption.
                     </p>
@@ -135,27 +141,133 @@
 
         <section id="testimonialsSection">
             <div class="container">
-                <div class="placeholder">placeholder</div>
-                <div class="placeholder">placeholder</div>
-                <div class="placeholder">placeholder</div>
+                <h3>TESTIMONIALS</h3>
+                <h2>We are committed expert partners</h2>
+                <p class="bigText">
+                    We place huge value on strong relationships 
+                    and have seen the benefit they bring to our business. 
+                    Customer feedback is vital in helping us to get it right.
+                </p>
                 <div class="flexCol">
-                    <div class="col"></div>
-                    <div class="col"></div>
-                    <div class="col"></div>
+
+                    <div class="col card flexRow">
+                        <div class="imgContainer">
+                            <img src="img/testimonial1.jpg" alt="testimonial">
+                        </div>
+                        <div class="textContainer">
+                            <p class="quote">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                Mollitia facilis magni! Obcaecati sit corrupti in 
+                                mollitia natus quaerat deleniti vel pariatur omnis, 
+                                saepe cupiditate magnam vero!
+                            </p>
+                            <span class="testimonialName bigText">Nat Reynolds</span>
+                        </div>
+                    </div> <!-- /card-->
+
+                    <div class="col card flexRow">
+                        <div class="imgContainer">
+                            <img src="img/testimonial2.jpg" alt="testimonial">
+                        </div>
+                        <div class="textContainer">
+                            <p class="quote">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                Mollitia facilis magni! Obcaecati sit corrupti in 
+                                mollitia natus quaerat deleniti vel pariatur omnis, 
+                                saepe cupiditate magnam vero!
+                            </p>
+                            <span class="testimonialName bigText">Celia Almeda</span>
+                        </div>
+                    </div> <!-- /card-->
+
+                    <div class="col card flexRow">
+                        <div class="imgContainer">
+                            <img src="img/testimonial3.jpg" alt="testimonial">
+                        </div>
+                        <div class="textContainer">
+                            <p class="quote">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                Mollitia facilis magni! Obcaecati sit corrupti in 
+                                mollitia natus quaerat deleniti vel pariatur omnis, 
+                                saepe cupiditate magnam vero!
+                            </p>
+                            <span class="testimonialName bigText">Bob Roberts</span>
+                        </div>
+                    </div> <!-- /card-->
+
                 </div> <!-- /flexCol-->
             </div> <!-- /container-->
         </section> <!-- /testimonialsSection-->
 
         <section id="benefitsSection">
             <div class="container">
-                <div class="placeholder">placeholder</div>
+                <h2>Benefits of working with us</h2>
                 <div class="flexRow">
-                    <div class="col"></div>
-                    <div class="col"></div>
-                    <div class="col"></div>
-                    <div class="col"></div>
-                    <div class="col"></div>
-                    <div class="col"></div>
+                    <div class="col card flexCol">
+                        <span class="cardNumber">01</span>
+                        <h2 class="cardTitle">High Quality</h2>
+                        <p class="smallText">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing 
+                            elit. Corrupti quas, error animi minus distinctio 
+                            cumque eligendi ad, laboriosam eaque, autem sunt.
+                        </p>
+                        <a class="btn largeBtn" href="#">more</a>
+                    </div>
+
+                    <div class="col card flexCol">
+                        <span class="cardNumber">02</span>
+                        <h2 class="cardTitle">High Quality</h2>
+                        <p class="smallText">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing 
+                            elit. Corrupti quas, error animi minus distinctio 
+                            cumque eligendi ad, laboriosam eaque, autem sunt.
+                        </p>
+                        <a class="btn largeBtn" href="#">more</a>
+                    </div>
+
+                    <div class="col card flexCol">
+                        <span class="cardNumber">03</span>
+                        <h2 class="cardTitle">Amazing Results</h2>
+                        <p class="smallText">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing 
+                            elit. Corrupti quas, error animi minus distinctio 
+                            cumque eligendi ad, laboriosam eaque, autem sunt.
+                        </p>
+                        <a class="btn largeBtn" href="#">more</a>
+                    </div>
+
+                    <div class="col card flexCol">
+                        <span class="cardNumber">04</span>
+                        <h2 class="cardTitle">Best Pricing</h2>
+                        <p class="smallText">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing 
+                            elit. Corrupti quas, error animi minus distinctio 
+                            cumque eligendi ad, laboriosam eaque, autem sunt.
+                        </p>
+                        <a class="btn largeBtn" href="#">more</a>
+                    </div>
+
+                    <div class="col card flexCol">
+                        <span class="cardNumber">05</span>
+                        <h2 class="cardTitle">Innovations</h2>
+                        <p class="smallText">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing 
+                            elit. Corrupti quas, error animi minus distinctio 
+                            cumque eligendi ad, laboriosam eaque, autem sunt.
+                        </p>
+                        <a class="btn largeBtn" href="#">more</a>
+                    </div>
+
+                    <div class="col card flexCol">
+                        <span class="cardNumber">06</span>
+                        <h2 class="cardTitle">24/7 Support</h2>
+                        <p class="smallText">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing 
+                            elit. Corrupti quas, error animi minus distinctio 
+                            cumque eligendi ad, laboriosam eaque, autem sunt.
+                        </p>
+                        <a class="btn largeBtn" href="#">more</a>
+                    </div>
                 </div> 
             </div> <!-- /container-->
         </section> <!-- /benefitsSection-->

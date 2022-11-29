@@ -34,6 +34,18 @@ body {
     background-color: var(--primaryColor);
 }
 
+section {
+    padding: 3rem 0;
+}
+
+section:nth-of-type(odd) {
+    background-color: white;
+}
+
+section:nth-of-type(even) {
+    background-color: var(--secondaryColor);
+}
+
 .container {
     max-width: 1140px;
     width: 85%;
@@ -45,13 +57,11 @@ body {
 
 .col {
     width: 100%;
-    /* height: 300px; */
     background-color: wheat;
 }
 
 .card {
     padding: var(--mainSpacing);
-    /* border-radius: 5%; */
     border-radius: 20px;
 }
 
@@ -78,6 +88,7 @@ body {
 }
 
 a.btn {
+    text-decoration: none;
     display: inline-block;
     color: black;
     background-color: white;
@@ -98,6 +109,7 @@ a.circularBtn {
     display: inline-block;
     height: 50px;
     width: 50px;
+
     border-radius: 50%;
     text-align: center;
     line-height: 50px;
@@ -110,7 +122,15 @@ p {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+}
+
+.smallText {
+    font-size: 0.9rem;
+}
+
+.bigText {
+    font-size: 1.1rem;
 }
 
 /* Header */
@@ -118,6 +138,7 @@ body > header {
     width: 100vw;
 
     padding: 16px 0;
+    z-index: 30;
 
     position: fixed;
     top: 0;
@@ -130,7 +151,7 @@ header .container {
     align-items: center;
 }
 
-header .container > button {
+header .container > #menu {
     display: inline-block;
     font-size: 1.4rem;
     color: white;
@@ -149,6 +170,7 @@ header .container > nav {
 header .container > nav ul {
     list-style: none;
     gap: 2rem;
+    align-items: center;
 }
 
 header a{
@@ -156,7 +178,7 @@ header a{
     color: white;
 }
 
-header button:active i {
+header #menu:active i {
     color: rgb(200, 200, 200);
 }
 
@@ -166,10 +188,6 @@ main {
 }
 
 /* --- Features Section --- */
-#featuresSection {
-    padding: 3rem 0;
-}
-
 #featuresSection .container {
     flex-wrap: wrap;
     gap: var(--mainSpacing);
@@ -185,15 +203,13 @@ main {
     color: var(--primaryColor);
 }
 
-#featuresSection .card h2 {
+#featuresSection .card .cardTitle {
     color: var(--primaryColor);
 }
 
 #featuresSection .card p {
-    font-size: 0.9rem;
     font-weight: 700;
-    /* line-height: 1.6em; */
-    color: rgb(81, 81, 81);
+    color: rgb(84, 84, 84);
 }
 
 #featuresSection .largeCol {
@@ -211,14 +227,8 @@ main {
     padding: var(--mainSpacing);
 }
 
-#featuresSection .largeCol .imgContainer {
-    align-self: flex-end;
-}
-
-#featuresSection .largeCol .imgContainer img {
-    width: 70%;
-    display: block;
-    margin: 0 auto;
+#featuresSection .largeCol p {
+    margin-top: var(--mainSpacing);
 }
 
 #featuresSection .largeCol .btn {
@@ -237,15 +247,21 @@ main {
     color: white;
 }
 
-/* --- Planning Section --- */
-#planningSection {
-    padding: 3rem 0;
-    background-color: var(--secondaryColor);
+#featuresSection .largeCol .imgContainer {
+    align-self: flex-end;
 }
 
+#featuresSection .largeCol .imgContainer img {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* --- Planning Section --- */
 #planningSection .container{
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-end;
     gap: var(--mainSpacing);
 }
 
@@ -264,6 +280,11 @@ main {
 #planningSection .card {
     text-align: center;
     background-color: white;
+    border-radius: 60px;
+}
+
+#planningSection .card img{
+    width: 60%;
 }
 
 #planningSection .card p {
@@ -271,25 +292,121 @@ main {
     margin-bottom: var(--mainSpacing);
 }
 
-
-
-
-
-
 /* --- Testimonials Section --- */
-#testimonialsSection .flexCol {
-    gap: 1rem;
+#testimonialsSection {
+    text-align: center;
 }
 
-#testimonialsSection .col {
+#testimonialsSection h3 {
+    font-weight: 500;
+}
+
+#testimonialsSection h2 {
+    color: var(--secondaryColor);
+    margin: var(--mainSpacing) 0;
+}
+
+#testimonialsSection p {
+    margin-bottom: var(--mainSpacing);
+}
+
+#testimonialsSection .flexCol {
+    gap: var(--mainSpacing);
+}
+
+#testimonialsSection .card {
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    color: white;
+    background-color: var(--secondaryColor);
+}
+
+#testimonialsSection .card .imgContainer {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    overflow: hidden;
+  
+    margin: 0 auto;
+    flex-shrink: 0;
+}
+
+#testimonialsSection .card .imgContainer img {
+    height: 100%;
     width: 100%;
+    object-fit: cover;
+}
+
+#testimonialsSection .card .textContainer {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#testimonialsSection .card .textContainer .testimonialName{
+    display: block;
+    margin-top: var(--mainSpacing);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+#testimonialsSection .quote::before, 
+#testimonialsSection .quote::after {
+    font-size: 3.5rem;
+    position: relative;
+    top: 30px;
+}
+
+#testimonialsSection .quote::before {
+    content: '\201C';
+}
+
+#testimonialsSection .quote::after {
+    content: '\201D';
 }
 
 /* --- Benefits Section --- */
 #benefitsSection .flexRow {
-    gap: 1.5rem;
+    gap: var(--mainSpacing);
     flex-wrap: wrap;
 }
+
+#benefitsSection .container > h2 {
+    color: white;
+    text-align: center;
+    margin: var(--mainSpacing) 0;
+}
+
+#benefitsSection .card {
+    align-items: flex-start;
+    gap: var(--mainSpacing);
+    background-color: white;
+}
+
+#benefitsSection .card .cardNumber {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--secondaryColor);
+}
+
+#benefitsSection .card h2 {
+    margin: 0;
+    color: var(--secondaryColor);
+}
+
+#benefitsSection .card p {
+    color: rgb(84, 84, 84);
+}
+
+#benefitsSection .card .btn {
+    background-color: var(--secondaryColor);
+    color: white;
+    font-weight: 700;
+}
+
+
+
 
 /* --- About Section --- */
 #aboutSection .container{
@@ -348,16 +465,26 @@ section {
         width: calc((100% / 3) * 2 - 0.5rem);
     }
 
-
-
-
-
-
-
     #planningSection .col {
-        width: 40%;
-        background-color: teal;
+        width: 35%;
     }
+
+    #testimonialsSection .card {
+        flex-wrap: nowrap;
+        width: 100%;
+        text-align: left;
+    }
+    #testimonialsSection .card .textContainer {
+        width: 70%;
+    }
+
+    #benefitsSection .col {
+        width: calc(50% - calc(var(--mainSpacing)) / 2);
+    }
+
+
+
+
 
     #aboutSection .col:first-child {
         width: 55%;
@@ -395,4 +522,10 @@ section {
         width: 50%;
     }
 
+    #benefitsSection .col {
+        /* width: calc(50% - calc(var(--mainSpacing)) / 2); */
+        width: calc((100% / 3) - 1rem);
+
+    }
+    
 }

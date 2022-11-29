@@ -122,7 +122,17 @@ main {
     gap: 1rem;
 }
 
+/* --- Get Started Section --- */
+#getStartedSection .placeholder {
+    width: 100%;
+    max-width: 440px;
+}
 
+/* --- Footer --- */
+footer .placeholder {
+    width: 100%;
+    max-width: 440px;
+}
 
 /* temp */
 section {
